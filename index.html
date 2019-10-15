@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Roadies | Home </title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/stylesheets/style.css">
+    <script src="wireframe.js" async></script>
+</head>
+<body data-spy="scroll" data-target="#navbar" data-offset="50" class="indexImageBody">
+    <header>
+        <nav class="navbar navbar-expand-md bg-inverse fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">The <span class="roadiesLogo">Roadies</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="true">
+                    <span class="custom-toggler-icon"><i class="fas fa-bars"></i></span>
+                </button>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active"><a class="nav-link" href="index.html"><span style="color: #e8491d"> Home</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html"> Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="products.html"> Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html"> Contact</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="signup.html"><i class="fas fa-user-plus"></i> Sign Up </a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html"><i class="fas fa-sign-in-alt"></i> Log In </a></li>
+                        <li class="nav-item"><a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="roadiesIndex">The Roadies</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="flyingTexts hide">
+                        <li>D</li>
+                        <li>r</li>
+                        <li>i</li>
+                        <li>v</li>
+                        <li>e</li>
+                        <li style="margin-right: 16px;">s</li>
+                        
+                        <li >Y</li>
+                        <li>o</li>
+                        <li style="margin-right: 16px;">u </li>
+                        
+                        <li>S</li>
+                        <li>a</li>
+                        <li>f</li>
+                        <li>e</li>
+                        <li>l</li>
+                        <li>y</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-copyright text-center footerIndex">
+            <p class="cpryt">&copy; Copyright 2019 <span style="color: #e8491d">The Roadies</span> &trade; All Rights Reserved.</p>
+        </div>
+    </footer>
+
+        <script src="public/javascripts/wireframe.js"></script>
+        <script src="https://use.fontawesome.com/releases/v5.9.0/js/all.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs//jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript">
+     
+        $(document).scroll(function(){
+            $('.navbar').toggleClass('scrolled', $(this).scrollTop() > $('.navbar').height());
+        });
+            $(function() {
+                setTimeout(function() {
+                    $('.flyingTexts').removeClass('hide');
+                }, 1000);
+            })();
+
+        $(document).ready(function(){
+            $(document).click(function(event){
+                var clickOn = $(event.target);
+                var toggleOpen = $('.navbar-collapse').hasClass('show');
+                if(toggleOpen === true && !clickOn.hasClass('navbar-toggler')){
+                    $('.navbar-toggler').click();
+                }
+            });
+        });
+        </script>
+</body>
+</html>
